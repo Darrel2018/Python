@@ -1,0 +1,5 @@
+In Python you can create variables that store data like strings and numbers.
+In Python you can create functions that contain lines of code that can be called on over and over again.
+In Python you can edit strings in way to formate them using builtin functions like 'lstrip', 'removesuffex', and 'rstrip'
+In Python you can create statistical data using the min, max, and sum functions that are built into Python
+In Python you can read and write data into a text file.

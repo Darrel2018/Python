@@ -1,0 +1,19 @@
+# Is Your Birthday Contained in Pi?
+
+from pathlib import Path
+
+path = Path("pi_ten_million.txt")
+contents = path.read_text()
+
+lines = contents.splitlines()
+
+pi_string = ''
+for line in lines:
+    pi_string += line
+
+birthday = input("Enter your birthday, in the form mmddyy: ")
+
+if birthday in pi_string:
+    print("Your birthday appears in the first 10 million digits of pi!")
+else:
+    print("Your birthday does not appear in the first 10 million digitsof pi.")
