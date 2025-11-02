@@ -1,17 +1,31 @@
 # Handling the FileNotFoundError Exception
-from pathlib import Path
+# from pathlib import Path
 
-path = Path("alice.txt")
+# path = Path("alice.txt")
 
 # # causes FileNotFoundError by itself when there is no alice.txt
 # contents = path.read_text(encoding="utf-8")
 
-try:
-    contents = path.read_text(encoding="utf-8")
-except FileNotFoundError:
-    print(f"Sorry, the file {path} does not exist.")
+# try:
+#     contents = path.read_text(encoding="utf-8")
+# except FileNotFoundError:
+#     print(f"Sorry, the file {path} does not exist.")
 
-print("\nReading another file...")
+# print("\nReading another file...")
 
 # -------------------------------------------------------
 
+# Analyzing Text
+
+from pathlib import Path
+
+path = Path('alice.txt')
+try:
+    contents = path.read_text(encoding='utf-8')
+except FileNotFoundError:
+    print(f"Sorry, the file {path} does not exist.")
+else:
+    # Count the approximate number of words in the file:
+    words = contents.split()
+    num_words = len(words)
+    print(f"The file {path} has about {num_words} words.")
